@@ -1,11 +1,19 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Builder'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         echo 'Hello Michelin'
         sh 'echo $HOSTNAME'
       }
     }
+  }
+  environment {
+    label = 'Builder'
   }
 }
