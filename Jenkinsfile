@@ -6,7 +6,7 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('agent-def') {
       steps {
         echo 'Hello Michelin'
         sh 'echo $HOSTNAME'
