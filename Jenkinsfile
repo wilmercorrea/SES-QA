@@ -12,6 +12,11 @@ pipeline {
         sh 'echo $HOSTNAME'
       }
     }
+    stage('two') {
+      steps {
+        sh 'node install --production'
+      }
+    }
   }
   environment {
     label = 'Builder'
